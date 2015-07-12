@@ -1,9 +1,10 @@
 # ForgeGradle 1.2
+
 ForgeGradle is a Gradle plugin designed for the building of Minecraft mods and plugins. It was originally designed for the use with the MinecraftForge API, but it has evolved to allow for other APIs such as LiteLoader and Sponge. 1.2 is the 'current' version of ForgeGradle, meaning that it is the one used for the very latest builds of MinecraftForge and is actively maintained.
 
 ---
 
-## Supported versions
+## 支持版本
  - **Minecraft**
     - 1.7.2
     - 1.7.10
