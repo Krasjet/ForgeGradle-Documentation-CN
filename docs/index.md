@@ -16,14 +16,14 @@ ForgeGradle is a Gradle plugin designed for the building of Minecraft mods and p
 
 ---
 
-## The Sections
+## 本文档的章节
 These sections can be found on the sidebar
 
-#### CookBook
+#### 配方
 The CookBook section is a collection of recipes. In this sense a Recipe is specific exact instructions to accomplish a given task. The majority of these recipes are simply snippets of gradle scripts with minimal explanation needed for an absolute beginner to use.
 
-#### User Guide
+#### 用户指南
 This section is similair to cookbook but instead houses full-length tutorials for each task. The objective of these tutorials is not only to teach someone how to do a given task, but also allow them to understand some of how it actually works and why. Ideally, those who have read through and understood all of these tutorials and have some knowledge of Gradle will be able to make use of the Adpet Reference section.
 
-#### Adept Reference
+#### 进阶参考
 This section is for people that know what they are doing as far as Gradle is concerned. It enumerates *exactly* what ForgeGradle does in the background without any sugar coating or extra information.
