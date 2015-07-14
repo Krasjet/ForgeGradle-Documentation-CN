@@ -1,6 +1,6 @@
 # ForgeGradle 1.2
 
-ForgeGradle is a Gradle plugin designed for the building of Minecraft mods and plugins. It was originally designed for the use with the MinecraftForge API, but it has evolved to allow for other APIs such as LiteLoader and Sponge. 1.2 is the 'current' version of ForgeGradle, meaning that it is the one used for the very latest builds of MinecraftForge and is actively maintained.
+ForgeGradle是一个为了方便构建Minecraft mod和插件而制作的Gradle插件. 原本它只是为MinecraftForge API定制的，但是现在它也能辅助其他API的构建，比如说LiteLoader和Sponge. ForgeGradle“当前的”版本为`1.2`，也就是说最新的MinecraftForge使用的就是这个版本，并且这个也是当前正在被维护的版本.
 
 ---
 
@@ -17,13 +17,17 @@ ForgeGradle is a Gradle plugin designed for the building of Minecraft mods and p
 ---
 
 ## 本文档的章节
-These sections can be found on the sidebar
 
-#### 配方
-The CookBook section is a collection of recipes. In this sense a Recipe is specific exact instructions to accomplish a given task. The majority of these recipes are simply snippets of gradle scripts with minimal explanation needed for an absolute beginner to use.
+在侧边栏你可以找到这个文档的三个部分.
 
-#### 用户指南
-This section is similair to cookbook but instead houses full-length tutorials for each task. The objective of these tutorials is not only to teach someone how to do a given task, but also allow them to understand some of how it actually works and why. Ideally, those who have read through and understood all of these tutorials and have some knowledge of Gradle will be able to make use of the Adpet Reference section.
+#### 食谱(Cookbook)
 
-#### 进阶参考
-This section is for people that know what they are doing as far as Gradle is concerned. It enumerates *exactly* what ForgeGradle does in the background without any sugar coating or extra information.
+食谱(Cookbook)部分是一系列的配方(Recipes). 在这里，配方是一个关于完成一个特定任务(Task)的详细说明. 大部分的配方都包括简单的Gradle脚本代码片段和足够一个初学者使用的少量的解释.
+
+#### 用户指南(User Guide)
+
+这一部分很像食谱部分，但是这一章包含了对每一个任务的详细的教程. 这些教程的目标不止为了教你如何完成相应的任务，更是为了让你理解代码是如何工作的以及我们为什么需要这个任务. 理想情况下，能够阅读并理解这一章所有的教程并会一些Gradle的人就能够利用好进阶参考部分了.
+
+#### 进阶参考(Adept Reference)
+
+这一部分是针对那些使用Gradle时知道他们在干什么的人的. 我们在这一章我们扒开ForgeGradle的糖衣列举了它**真正**在做得工作，没有任何附加信息.
