@@ -7,6 +7,6 @@ repo_url: https://github.com/Meow-J/ForgeGradle-Documentation-CN
 pages:
 - ['index.md', '介绍']
 - ['cookbook.md', '食谱']
-- ['user-guide/shading.md', '用户指南', '包含外部库到Jar中(Shading)']
+- ['user-guide/shading.md', '用户指南', 'Shading']
 - ['reference/mcblock.md', '进阶参考', "Minecraft{}"]
 - ['reference/tasks.md', '进阶参考', "任务"]

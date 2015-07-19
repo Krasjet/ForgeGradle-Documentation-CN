@@ -66,7 +66,7 @@ def getVersionAppendage() {
 version = "1.2.3_" + getVersionAppendage()
 ```
 
-### 打包依赖(Shading)
+### Shading
 
 在这个例子当中，我们需要打包EJML库到我们的jar里去. 当然，你可以对任何被当做依赖的jar随同代码进行打包. 每个库的文件都在不同的包(Package)里面，在这里EJML的根包(Root Package)是 `org.ejml`，并且我想把它重定位到 `your.new.package.here.ejml` 去. 注意包名称里的点(`.`)被替换成了斜线(`/`).
 
