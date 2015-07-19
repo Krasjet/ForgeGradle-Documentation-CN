@@ -5,7 +5,7 @@
 
 ### 创建反混淆的jar文件
 
-```gradle
+```
 task deobfJar(type: Jar, dependsOn: 'jar') {
     from "build/source/main"
     classifier "dev"
@@ -48,7 +48,7 @@ artifacts {
 version = "1.2.3." + System.env.BUILD_NUMBER
 ```
 
-### 获取一个GitGetting a git hash
+### 获取一个Git的哈希值(Hash)
 
 不是所有人都安装了Git并且把它加到PATH里面，所以最好只在缺少环境变量或者怎么样的情况下使用这个方法. 在这个例子中环境变量 `BUILD_NUMBER` 在运行Git指令之前被先检查是否存在，如果存在直接返回 `BUILD_NUMBER`. 如果Git指令运行失败了，我们将会使用字符串 `"GITBROK"` 而不是版本号.
 
