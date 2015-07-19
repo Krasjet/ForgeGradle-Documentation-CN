@@ -1,8 +1,11 @@
-#The CookBook
-This page houses a collection of recipes. In this sense a Recipe is specific exact instructions to accomplish a given task. The majority of these recipes are simply snippets of Gradle scripts with minimal explanation needed for an absolute beginner to use.
+#食谱(The Cookbook)
 
-###Creating a deobfuscated jar
-```
+这一节包含了很多的配方. 在这里"配方(Recipe)"指的是为了完成特定任务的一系列详细的指令. 大部分的配方都是很简单的Gradle脚本代码，当然我们也会有少量的解释帮助初学者使用这些代码.
+
+
+### 创建反混淆的jar文件
+
+```gradle
 task deobfJar(type: Jar, dependsOn: 'jar') {
     from "build/source/main"
     classifier "dev"
@@ -12,8 +15,9 @@ artifacts {
 }
 ```
 
-###Creating a source jar
-```
+### 创建源码jar文件
+
+```gradle
 task sourceJar(type: Jar, dependsOn: 'sourceMainJava') {
     from "build/sources/java"
     from "build/resources/main/java"
@@ -24,8 +28,9 @@ artifacts {
 }
 ```
 
-###Creating a javadoc jar
-```
+### 创建Javadoc的jar文件
+
+```gradle
 task javadocJar(type: Jar, dependsOn: 'javadoc') {
     from "build/docs/javadoc"
     classifier "javadoc"
@@ -35,15 +40,20 @@ artifacts {
 }
 ```
 
-###Using environment variables
-In this case, BUILD_NUMBER is the environment variable we care about.
-```
-version = "1.2.3."+System.env.BUILD_NUMBER
+### 使用环境变量
+
+在这里，`BUILD_NUMBER` 是我们使用的环境变量
+
+```gradle
+version = "1.2.3." + System.env.BUILD_NUMBER
 ```
 
-### Getting a git hash
-Not everyone has git installed and on their PATH, so it is usually best to only do this if the environment variable is missing or something. In this example the BUILD_NUMBER environment variable is checked first before trying the git command, and if the git command fails for any reason the string "GITBROK" is used.
-```
+### 获取一个GitGetting a git hash
+
+不是所有人都安装了Git并且把它加到PATH里面，所以最好只在缺少环境变量或者怎么样的情况下使用这个方法. 在这个例子中环境变量 `BUILD_NUMBER` 在运行Git指令之前被先检查是否存在，如果存在直接返回 `BUILD_NUMBER`. 如果Git指令运行失败了，我们将会使用字符串 `"GITBROK"` 而不是版本号.
+
+
+```gradle
 def getVersionAppendage() {
     if (System.env.BUILD_NUMBER)
         return System.env.BUILD_NUMBER
@@ -53,12 +63,14 @@ def getVersionAppendage() {
     return "DEV." + proc.exitValue() ? "GITBORK" : proc.text.trim()
 }
 
-version = "1.2.3_"+getVersionAppendage()
+version = "1.2.3_" + getVersionAppendage()
 ```
 
-### Shading
-In this example, the EJML library is being shaded. This can be done with almost any jar you can define as a dependency. Each library has a different package its files are in, in this case EJMLs root package is ```org.ejml```, and I want to relocate it to ```your.new.package.here.ejml```. Notice that the periods have been replaced with slashes.
-```
+### 打包依赖(Shading)
+
+在这个例子当中，我们需要打包EJML库到我们的jar里去. 当然，你可以对任何被当做依赖的jar随同代码进行打包. 每个库的文件都在不同的包(Package)里面，在这里EJML的根包(Root Package)是 `org.ejml`，并且我想把它重定位到 `your.new.package.here.ejml` 去. 注意包名称里的点(`.`)被替换成了斜线(`/`).
+
+```gradle
 minecraft {
     srgExtra "PK:org/ejml your/new/package/here/ejml"
 }
