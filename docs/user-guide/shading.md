@@ -48,4 +48,8 @@ minecraft {
 }
 ```
 
-这一部分告诉了Gradle你想将什么包转移到哪里. 它利用了ForgeGradle的重混淆(Reobfuscation)机制，所以这几行也只有在构建当中重混淆的步骤才能生效. 这些**srgExtra**字符串是SRG行(译注: SRG Lines，SRG名是以Searge命名的，为了多版本通用而创建的名字，类似于field_12345_a之类的字段或者方法什么的，也是现在Forge运行时使用的名字，具体写法什么的可以参考MCP的conf/joined.srg文件)，它们也可以被定义为单独的类、字段、方法和包. 这一部分可以放在build.gradle的任何地方.
+这一部分告诉了Gradle你想将什么包转移到哪里. 它利用了ForgeGradle的重混淆(Reobfuscation)机制，所以这几行也只有在构建当中重混淆的步骤才能生效. 这些**srgExtra**字符串是SRG行()，它们也可以被定义为单独的类、字段、方法和包. 这一部分可以放在build.gradle的任何地方.
+
+!!! Info
+
+	译注: 关于SRG行(SRG Lines)一些东西: SRG名是以Searge命名的，为了多版本通用而创建的名字，类似于field_12345_a之类的字段或者方法什么的，也是现在Forge运行时使用的名字，SRG Lines简单来说就是能够替换Java字节码内容的指令，具体写法什么的可以参考MCP的conf/joined.srg文件
