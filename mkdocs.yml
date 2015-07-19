@@ -10,3 +10,8 @@ pages:
 - ['user-guide/shading.md', '用户指南', 'Shading']
 - ['reference/mcblock.md', '进阶参考', "Minecraft{}"]
 - ['reference/tasks.md', '进阶参考', "任务"]
+
+markdown_extensions:
+  - admonition
+  - smarty
+  - sane_lists
