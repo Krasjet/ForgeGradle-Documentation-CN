@@ -5,7 +5,7 @@
 
 ### 创建反混淆的jar文件
 
-```gradle
+```
 task deobfJar(type: Jar, dependsOn: 'jar') {
     from "build/source/main"
     classifier "dev"
