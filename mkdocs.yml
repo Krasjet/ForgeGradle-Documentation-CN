@@ -13,3 +13,6 @@ pages:
 
 markdown_extensions:
   - admonition
+  
+extra_css:
+  - css/code.css
