@@ -88,7 +88,7 @@ jar {
     configurations.shade.each { dep ->
         from(project.zipTree(dep)){
             exclude 'META-INF', 'META-INF/**'
-            // you may exclude other things here if you want, or maybe copy the META-INF
+            // 如果你愿意也可以在这里排除(Exclude)其它文件，或者复制META-INF
         }
     }
 }
