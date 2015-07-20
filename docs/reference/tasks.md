@@ -4,7 +4,7 @@
 
 ### SetupCIWorkspace
 
-这一个任务为那些无外设的持续集成(Continuous Integration)服务器设计的，它们既不需要也没有能力运行Minecraft客户端. 它仅仅只需要一个能编译Minecraft mod的最低要求；具体来说有以下几个人我也:
+这一个任务为那些无外设的持续集成(Continuous Integration)服务器设计的，它们既不需要也没有能力运行Minecraft客户端. 它仅仅只需要一个能编译Minecraft mod的最低要求；具体来说有以下几个任务:
 
  - 下载MC的jar文件
  - 下载Forge/FML的userdev包
