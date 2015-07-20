@@ -5,7 +5,7 @@
 
 ### 创建反混淆的jar文件
 
-```gradle
+```
 task deobfJar(type: Jar, dependsOn: 'jar') {
     from "build/source/main"
     classifier "dev"
@@ -17,7 +17,7 @@ artifacts {
 
 ### 创建源码jar文件
 
-```gradle
+```
 task sourceJar(type: Jar, dependsOn: 'sourceMainJava') {
     from "build/sources/java"
     from "build/resources/main/java"
@@ -30,7 +30,7 @@ artifacts {
 
 ### 创建Javadoc的jar文件
 
-```gradle
+```
 task javadocJar(type: Jar, dependsOn: 'javadoc') {
     from "build/docs/javadoc"
     classifier "javadoc"
@@ -44,7 +44,7 @@ artifacts {
 
 在这里，`BUILD_NUMBER` 是我们使用的环境变量
 
-```gradle
+```
 version = "1.2.3." + System.env.BUILD_NUMBER
 ```
 
@@ -53,7 +53,7 @@ version = "1.2.3." + System.env.BUILD_NUMBER
 不是所有人都安装了Git并且把它加到PATH里面，所以最好只在缺少环境变量或者怎么样的情况下使用这个方法. 在这个例子中环境变量 `BUILD_NUMBER` 在运行Git指令之前被先检查是否存在，如果存在直接返回 `BUILD_NUMBER`. 如果Git指令运行失败了，我们将会使用字符串 `"GITBROK"` 而不是版本号.
 
 
-```gradle
+```
 def getVersionAppendage() {
     if (System.env.BUILD_NUMBER)
         return System.env.BUILD_NUMBER
@@ -70,7 +70,7 @@ version = "1.2.3_" + getVersionAppendage()
 
 在这个例子当中，我们需要打包EJML库到我们的jar里去. 当然，你可以对任何被当做依赖的jar随同代码进行打包. 每个库的文件都在不同的包(Package)里面，在这里EJML的根包(Root Package)是 `org.ejml`，并且我想把它重定位到 `your.new.package.here.ejml` 去. 注意包名称里的点(`.`)被替换成了斜线(`/`).
 
-```gradle
+```
 minecraft {
     srgExtra "PK:org/ejml your/new/package/here/ejml"
 }

@@ -12,7 +12,7 @@ Shade一个库就是将这个库里面的所有内容放到你自己的jar文件
 
 ## 怎样去做?
 
-```gradle
+```
 configurations {
     shade
     compile.extendsFrom shade
@@ -21,7 +21,7 @@ configurations {
 
 这定义了一个独立于 *compile* 配置的新的配置(依赖容器(Dependency Container))，但是**compile**配置继承我们的新配置，所以我们在**shade**配置里定义的所有东西都将存在于**compile**配置里. 这允许我们从即将被编译依赖里面分离出来我们需要shade的依赖.
 
-```gradle
+```
 dependencies {
     shade 'com.googlecode.efficient-java-matrix-library:ejml:0.25'
 }
@@ -29,7 +29,7 @@ dependencies {
 
 注意这个依赖声明行由**shade**开头，而不是 **compile**，这意味着我们正在将一特定依赖加到我们之前定义的**shade**配置中，而不是**compile**配置中.这一个dependency{}代码块**必须**在configurations{}代码块的后面. Gradle脚本是有顺序的，我们不能使用还没有被定义的东西.
 
-```gradle
+```
 jar {
     configurations.shade.each { dep ->
         from(project.zipTree(dep)){

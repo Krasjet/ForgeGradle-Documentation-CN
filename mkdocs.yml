@@ -13,5 +13,3 @@ pages:
 
 markdown_extensions:
   - admonition
-  - smarty
-  - sane_lists
