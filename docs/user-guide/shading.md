@@ -43,8 +43,8 @@ jar {
 
 ```
 minecraft {
-    srgExtra "PK:org/ejml your/new/package/here/ejml"
-    srgExtra "PK:org/ejml/alg your/new/package/here/ejml/alg"
+    srgExtra "PK: org/ejml your/new/package/here/ejml"
+    srgExtra "PK: org/ejml/alg your/new/package/here/ejml/alg"
 }
 ```
 
