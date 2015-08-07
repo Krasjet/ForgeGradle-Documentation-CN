@@ -54,4 +54,4 @@ minecraft {
 
 	关于SRG行(SRG Lines)一些东西: 
 
-	SRG名是以Searge命名的，为了多版本通用而创建的名字，类似于field_12345_a之类的字段或者方法什么的，也是现在Forge运行时使用的名字，SRG Lines简单来说就是能够替换Java字节码内容的指令，具体写法什么的可以参考MCP的conf/joined.srg文件.
+	SRG名是以Searge命名的，为了多版本通用而创建的名字，类似于field_12345_a之类的字段或者方法什么的，也是现在Forge运行时使用的名字，SRG Lines简单来说就是能够替换Java字节码内容的指令，具体写法什么的可以参考MCP的conf/joined.srg文件(当然并不止这一个地方有srg文件).
