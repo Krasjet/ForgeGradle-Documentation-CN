@@ -15,7 +15,7 @@
 
 ### SetupDevWorkspace
 
-这个方法建立了一个供Minecraft mod开发的开发环境. 它包括了编译Minecraft mod与运行Minecraft所需要的所有东西. 它做了SetupCIWorkspace里的所有任务之外加上下面几个额外的任务:
+这个方法建立了一个供Minecraft mod开发的开发环境. 它包括了编译Minecraft mod与运行Minecraft所需要的所有东西. 它做了SetupCIWorkspace里的所有任务之外还加上下面几个额外的任务:
 
  - 下载并解压LWJGL的本地文件(Natives)
  - 下载Minecraft的AssetIndex文件
@@ -25,7 +25,7 @@
 
 ### SetupDecompWorkspace
 
-这个任务是至今最受欢迎的环境建立任务了. 它建立了一个完整的开发环境，它和setupDevWorkspace很相似，主要不同是它反编译了Minecraft并且提供了可浏览的反编译之后的Java代码. 具体来说它做了以下任务:
+这个任务是至今最受欢迎的环境建立任务了. 它建立了一个完整的开发环境. 这个任务和setupDevWorkspace很相似，主要的不同是它反编译了Minecraft，并且提供了可浏览的反编译后的Java代码. 具体来说它做了以下任务:
 
 - 下载MC
 - 下载Forge/FML的userdev包
