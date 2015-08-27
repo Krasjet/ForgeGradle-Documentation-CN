@@ -17,6 +17,8 @@ artifacts {
 
 ### 创建源码jar文件
 
+(译注：这个任务在ForgeGradle 2.0之后自带了，不需要自己新建了)
+
 ```
 task sourceJar(type: Jar, dependsOn: 'sourceMainJava') {
     from "build/sources/java"
