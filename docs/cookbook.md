@@ -74,7 +74,7 @@ version = "1.2.3_" + getVersionAppendage()
 
 ```
 minecraft {
-    srgExtra "PK:org/ejml your/new/package/here/ejml"
+    srgExtra "PK: org/ejml your/new/package/here/ejml"
 }
 
 configurations {
